@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FAF6F1" />
+
+  <!-- ============================== -->
+  <!-- SEO META — edit if you rebrand -->
+  <!-- ============================== -->
+  <title>Amara Lash · Bespoke Eyelash Extensions · Brooklyn, NY</title>
+  <meta name="description" content="Amara Lash — custom luxury eyelash extensions in Brooklyn. Classic, hybrid, volume, mega volume, and wispy sets crafted for your eye shape in a calm, private studio." />
+  <meta name="keywords" content="eyelash extensions Brooklyn, lash extensions NYC, classic lashes, volume lashes, mega volume, wispy lashes, Kings Highway lash studio" />
+  <link rel="canonical" href="https://YOUR-DOMAIN.com/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Amara Lash · Bespoke Eyelash Extensions" />
+  <meta property="og:description" content="Custom luxury lash extensions in Brooklyn, NY — designed for your eye shape, lifestyle, and the look you want to live in." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://YOUR-DOMAIN.com/" />
+  <!-- TODO: REPLACE with hosted social card image (1200x630) -->
+  <meta property="og:image" content="https://YOUR-DOMAIN.com/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Favicon (inline SVG, swap if you have a real mark) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232A1F1A'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%23FAF6F1' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
+
+  <!-- ============================== -->
+  <!-- Schema.org — LocalBusiness     -->
+  <!-- ============================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Amara Lash",
+    "image": "https://YOUR-DOMAIN.com/og-image.jpg",
+    "@id": "https://YOUR-DOMAIN.com",
+    "url": "https://YOUR-DOMAIN.com",
+    "telephone": "+1-929-713-6953",
+    "email": "jasminakhi17@gmail.com",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "816 Kings Hwy",
+      "addressLocality": "Brooklyn",
+      "addressRegion": "NY",
+      "postalCode": "11223",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.6037,
+      "longitude": -73.9676
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "10:00",
+      "closes": "20:00"
+    }],
+    "sameAs": ["https://instagram.com/amara_lashess"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Lash Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Classic Lash Set" }, "price": "100", "priceCurrency": "USD" },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hybrid Lash Set" }, "price": "120", "priceCurrency": "USD" },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Volume Lash Set" }, "price": "120", "priceCurrency": "USD" },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mega Volume Lash Set" }, "price": "220", "priceCurrency": "USD" },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wispy Lash Set" }, "price": "120", "priceCurrency": "USD" }
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    /* ============================================================
+       DESIGN TOKENS
+       ============================================================ */
+    :root {
+      /* Palette — warm nudes, blush, cream, espresso */
+      --cream: #FAF6F1;
+      --cream-deep: #F2EBE2;
+      --blush: #E8D5C8;
+      --blush-soft: #F2E0D5;
+      --nude: #D4B5A0;
+      --espresso: #2A1F1A;
+      --espresso-soft: #4A3D35;
+      --espresso-mute: #6B5F57; /* darkened from #8A7E76 to meet WCAG AA contrast on cream */
+      --gold: #B8956A;
+      --line: rgba(42, 31, 26, 0.10);
+      --line-strong: rgba(42, 31, 26, 0.18);
+
+      /* Type */
+      --serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Inter', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+      /* Layout */
+      --max-w: 1280px;
+      --gutter: clamp(20px, 5vw, 80px);
+      --section-y: clamp(72px, 11vw, 140px);
+
+      --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* ============================================================
+       RESET & BASE
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--espresso);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; transition: color .3s var(--ease); }
+    button { font-family: inherit; cursor: pointer; border: 0; background: none; }
+    ul, ol { margin: 0; padding: 0; list-style: none; }
+
+    /* Selection */
+    ::selection { background: var(--espresso); color: var(--cream); }
+
+    /* ============================================================
+       TYPOGRAPHY
+       ============================================================ */
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      margin: 0;
+      color: var(--espresso);
+    }
+    h1 { font-size: clamp(2.6rem, 7vw, 5.4rem); }
+    h2 { font-size: clamp(2rem, 4.5vw, 3.4rem); }
+    h3 { font-size: clamp(1.3rem, 2vw, 1.6rem); }
+    p { margin: 0 0 1em; }
+    .eyebrow {
+      font-family: var(--sans);
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--espresso-mute);
+      margin-bottom: 1.4rem;
+      display: inline-block;
+    }
+    .eyebrow::before {
+      content: ""; display: inline-block; width: 28px; height: 1px;
+      background: var(--espresso-mute); vertical-align: middle;
+      margin-right: 14px; margin-bottom: 3px;
+    }
+
+    /* ============================================================
+       LAYOUT PRIMITIVES
+       ============================================================ */
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+    section { padding: var(--section-y) 0; scroll-margin-top: 80px; /* offset for fixed nav on anchor scroll */ }
+    .section-head { max-width: 720px; margin: 0 auto var(--section-y) auto; text-align: center; padding-bottom: 0; }
+    .section-head p { color: var(--espresso-soft); margin-top: 1.2rem; font-size: 1.05rem; }
+
+    /* ============================================================
+       BUTTONS
+       ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 36px;
+      font-size: .8rem;
+      font-weight: 500;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: all .35s var(--ease);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--espresso);
+      color: var(--cream);
+    }
+    .btn-primary:hover {
+      background: var(--espresso-soft);
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px -16px rgba(42, 31, 26, 0.45);
+    }
+    .btn .arrow { transition: transform .35s var(--ease); }
+    .btn:hover .arrow { transform: translateX(4px); }
+
+    /* ============================================================
+       NAV
+       ============================================================ */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 24px var(--gutter);
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background .4s var(--ease), padding .4s var(--ease), border-color .4s var(--ease);
+      background: transparent;
+      border-bottom: 1px solid transparent;
+    }
+    .nav.scrolled {
+      background: rgba(250, 246, 241, 0.92);
+      backdrop-filter: saturate(140%) blur(12px);
+      -webkit-backdrop-filter: saturate(140%) blur(12px);
+      padding: 16px var(--gutter);
+      border-bottom-color: var(--line);
+    }
+    .nav-brand {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      letter-spacing: .04em;
+      color: var(--espresso);
+    }
+    .nav-brand span { font-style: italic; font-weight: 500; }
+    .nav-links {
+      display: flex; align-items: center; gap: 38px;
+    }
+    .nav-links a {
+      font-size: .78rem; font-weight: 500;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--espresso-soft);
+      position: relative;
+    }
+    .nav-links a::after {
+      content: ""; position: absolute; left: 0; bottom: -6px;
+      width: 0; height: 1px; background: var(--espresso);
+      transition: width .3s var(--ease);
+    }
+    .nav-links a:hover { color: var(--espresso); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta { display: inline-flex; }
+    .nav-cta .btn {
+      padding: 12px 24px; font-size: .7rem;
+    }
+
+    .nav-toggle {
+      display: none;
+      width: 40px; height: 40px;
+      align-items: center; justify-content: center;
+      color: var(--espresso);
+    }
+    .nav-toggle span {
+      display: block; width: 22px; height: 1px;
+      background: currentColor; position: relative;
+      transition: transform .3s var(--ease), opacity .3s var(--ease);
+    }
+    .nav-toggle span::before, .nav-toggle span::after {
+      content: ""; position: absolute; left: 0; width: 100%; height: 1px;
+      background: currentColor; transition: transform .3s var(--ease);
+    }
+    .nav-toggle span::before { top: -7px; }
+    .nav-toggle span::after { top: 7px; }
+    .nav.open .nav-toggle span { background: transparent; }
+    .nav.open .nav-toggle span::before { transform: translateY(7px) rotate(45deg); }
+    .nav.open .nav-toggle span::after { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ============================================================
+       HERO
+       ============================================================ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 140px var(--gutter) 80px;
+      overflow: hidden;
+      isolation: isolate;
+      color: var(--cream);
+    }
+    /* TODO: REPLACE the background-image URL below with your high-res hero photo
+       (recommended: a soft, close-up lash shot, 2400x1600+, neutral lighting). */
+    .hero-bg {
+      position: absolute; inset: 0; z-index: -2;
+      background:
+        linear-gradient(135deg, #2A1F1A 0%, #4A3D35 55%, #6B5847 100%);
+      /* When you have a real image, use:
+         background: url('/path/to/your-hero.jpg') center/cover no-repeat; */
+    }
+    .hero-bg::after {
+      content: "";
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 35%, rgba(212, 181, 160, 0.18), transparent 55%),
+        radial-gradient(ellipse at 25% 75%, rgba(232, 213, 200, 0.10), transparent 60%);
+    }
+    .hero-overlay {
+      position: absolute; inset: 0; z-index: -1;
+      background: linear-gradient(180deg, rgba(26,20,16,0.55) 0%, rgba(26,20,16,0.35) 50%, rgba(26,20,16,0.7) 100%);
+    }
+    .hero-eyebrow {
+      color: rgba(250, 246, 241, 0.75);
+      font-family: var(--sans);
+      font-size: .72rem;
+      font-weight: 400;
+      letter-spacing: .42em;
+      text-transform: uppercase;
+      margin-bottom: 36px;
+      display: block;
+    }
+    .hero-eyebrow::before {
+      content: ""; display: inline-block; width: 36px; height: 1px;
+      background: rgba(250, 246, 241, 0.5); vertical-align: middle;
+      margin-right: 16px; margin-bottom: 4px;
+    }
+    .hero-eyebrow::after {
+      content: ""; display: inline-block; width: 36px; height: 1px;
+      background: rgba(250, 246, 241, 0.5); vertical-align: middle;
+      margin-left: 16px; margin-bottom: 4px;
+    }
+    .hero h1 {
+      color: var(--cream);
+      font-weight: 400;
+      max-width: 14ch;
+      margin: 0 auto;
+      letter-spacing: -0.015em;
+    }
+    .hero h1 em { font-style: italic; color: var(--blush); font-weight: 500; }
+    .hero-tagline {
+      margin: 32px auto 48px;
+      max-width: 38ch;
+      font-size: clamp(1rem, 1.4vw, 1.15rem);
+      line-height: 1.7;
+      color: rgba(250, 246, 241, 0.85);
+      font-weight: 300;
+    }
+    .hero .btn-primary {
+      background: var(--cream);
+      color: var(--espresso);
+    }
+    .hero .btn-primary:hover {
+      background: var(--blush);
+      box-shadow: 0 18px 40px -16px rgba(0, 0, 0, 0.5);
+    }
+    .hero-scroll {
+      position: absolute; left: 50%; bottom: 36px;
+      transform: translateX(-50%);
+      color: rgba(250, 246, 241, 0.6);
+      font-size: .68rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      animation: bobble 2.6s var(--ease) infinite;
+    }
+    .hero-scroll::after {
+      content: ""; display: block; width: 1px; height: 40px;
+      background: rgba(250, 246, 241, 0.4); margin: 14px auto 0;
+    }
+    @keyframes bobble { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 6px); } }
+
+    /* ============================================================
+       ABOUT
+       ============================================================ */
+    .about {
+      background: var(--cream);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: clamp(40px, 6vw, 96px);
+      align-items: center;
+    }
+    .about-image {
+      aspect-ratio: 4 / 5;
+      background: linear-gradient(135deg, var(--blush) 0%, var(--nude) 100%);
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+    /* TODO: REPLACE with your founder/studio photo
+       (recommended: portrait orientation, soft natural light, 4:5 ratio).
+       Either set a background-image on .about-image, or place an <img> inside it. */
+    .about-image::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 40% 30%, rgba(255,255,255,0.18), transparent 70%);
+    }
+    .about-image-frame {
+      position: absolute;
+      inset: -16px -16px 16px 16px;
+      border: 1px solid var(--line-strong);
+      border-radius: 2px;
+      z-index: -1;
+    }
+    .about-image-wrap { position: relative; isolation: isolate; }
+    .about-text h2 { margin-bottom: 28px; }
+    .about-text h2 em { font-style: italic; }
+    .about-text p {
+      color: var(--espresso-soft);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+    .about-credentials {
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid var(--line);
+      display: flex; gap: 48px; flex-wrap: wrap;
+    }
+    .credential {
+      font-size: .72rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--espresso-mute);
+    }
+    .credential strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 2rem;
+      letter-spacing: 0;
+      color: var(--espresso);
+      font-weight: 400;
+      margin-bottom: 4px;
+      text-transform: none;
+    }
+
+    /* ============================================================
+       SERVICES
+       ============================================================ */
+    .services {
+      background: var(--cream-deep);
+    }
+    .services-list {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .service {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      padding: 36px 0;
+      border-bottom: 1px solid var(--line);
+      align-items: baseline;
+      transition: padding .3s var(--ease);
+    }
+    .service:hover { padding-left: 12px; }
+    .service:last-child { border-bottom: 0; }
+    .service-name {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+      margin-bottom: 8px;
+    }
+    .service-meta {
+      display: flex; gap: 24px;
+      font-size: .72rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--espresso-mute);
+      margin-bottom: 12px;
+    }
+    .service-desc {
+      color: var(--espresso-soft);
+      font-size: 1rem;
+      max-width: 56ch;
+      margin: 0;
+    }
+    .service-price {
+      font-family: var(--serif);
+      font-size: 2rem;
+      color: var(--espresso);
+      font-weight: 400;
+      align-self: center;
+      white-space: nowrap;
+    }
+    .services-note {
+      text-align: center;
+      margin-top: 56px;
+      font-size: .9rem;
+      color: var(--espresso-mute);
+      font-style: italic;
+    }
+
+    /* ============================================================
+       GALLERY
+       ============================================================ */
+    .gallery {
+      background: var(--cream);
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(8px, 1vw, 14px);
+    }
+    .gallery-item {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 2px;
+      background: var(--blush-soft);
+    }
+    .gallery-item:nth-child(3n+1) { background: linear-gradient(135deg, #E8D5C8, #D4B5A0); }
+    .gallery-item:nth-child(3n+2) { background: linear-gradient(135deg, #F2E0D5, #E8D5C8); }
+    .gallery-item:nth-child(3n+3) { background: linear-gradient(135deg, #D4B5A0, #B8956A); }
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 1s var(--ease-out), opacity .6s var(--ease);
+    }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(42,31,26,0.18));
+      opacity: 0; transition: opacity .4s var(--ease);
+    }
+    .gallery-item:hover::after { opacity: 1; }
+    /* TODO: REPLACE the 9 placeholder images below with your real gallery photos
+       (recommended: square 1:1 crops, ~1200x1200, soft natural light). */
+
+    /* ============================================================
+       TESTIMONIALS
+       ============================================================ */
+    .testimonials {
+      background: var(--espresso);
+      color: var(--cream);
+    }
+    .testimonials .eyebrow { color: rgba(250,246,241,0.55); }
+    .testimonials .eyebrow::before { background: rgba(250,246,241,0.45); }
+    .testimonials h2 { color: var(--cream); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(28px, 3vw, 48px);
+      margin-top: 24px;
+    }
+    .testimonial {
+      padding: 48px 32px;
+      border: 1px solid rgba(250,246,241,0.10);
+      border-radius: 2px;
+      background: rgba(250,246,241,0.025);
+      transition: background .4s var(--ease), transform .4s var(--ease);
+    }
+    .testimonial:hover {
+      background: rgba(250,246,241,0.05);
+      transform: translateY(-4px);
+    }
+    .testimonial-stars {
+      color: var(--blush);
+      letter-spacing: 4px;
+      font-size: .85rem;
+      margin-bottom: 24px;
+    }
+    .testimonial-quote {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--cream);
+      margin-bottom: 28px;
+    }
+    .testimonial-name {
+      font-size: .72rem;
+      letter-spacing: .26em;
+      text-transform: uppercase;
+      color: rgba(250,246,241,0.65);
+    }
+    .testimonial-name::before {
+      content: ""; display: inline-block; width: 24px; height: 1px;
+      background: rgba(250,246,241,0.4); vertical-align: middle;
+      margin-right: 12px; margin-bottom: 3px;
+    }
+
+    /* ============================================================
+       FAQ
+       ============================================================ */
+    .faq {
+      background: var(--cream);
+    }
+    .faq-list {
+      max-width: 800px; margin: 0 auto;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+    }
+    .faq-q {
+      width: 100%;
+      padding: 32px 0;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 24px;
+      text-align: left;
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+      color: var(--espresso);
+      transition: color .3s var(--ease);
+    }
+    .faq-q:hover { color: var(--gold); }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 28px; height: 28px;
+      position: relative;
+      transition: transform .4s var(--ease);
+    }
+    .faq-icon::before, .faq-icon::after {
+      content: ""; position: absolute; top: 50%; left: 50%;
+      width: 14px; height: 1px; background: var(--espresso);
+      transform: translate(-50%, -50%);
+      transition: transform .4s var(--ease);
+    }
+    .faq-icon::after { transform: translate(-50%, -50%) rotate(90deg); }
+    .faq-item.open .faq-icon::after { transform: translate(-50%, -50%) rotate(0); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .5s var(--ease);
+    }
+    .faq-a-inner {
+      padding: 0 0 32px 0;
+      color: var(--espresso-soft);
+      font-size: 1rem;
+      line-height: 1.75;
+      max-width: 64ch;
+    }
+
+    /* ============================================================
+       CONTACT
+       ============================================================ */
+    .contact {
+      background: var(--cream-deep);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: clamp(40px, 5vw, 80px);
+      align-items: stretch;
+    }
+    .contact-detail {
+      display: block;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .contact-detail:first-of-type { border-top: 1px solid var(--line); }
+    .contact-label {
+      display: block;
+      font-size: .68rem;
+      letter-spacing: .26em;
+      text-transform: uppercase;
+      color: var(--espresso-mute);
+      margin-bottom: 6px;
+    }
+    .contact-value {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      color: var(--espresso);
+      transition: color .3s var(--ease);
+    }
+    a.contact-detail:hover .contact-value { color: var(--gold); }
+    .contact-hours { font-family: var(--sans); font-size: .95rem; color: var(--espresso-soft); }
+    .contact-hours div { margin-top: 4px; }
+    .contact-map {
+      border-radius: 2px;
+      overflow: hidden;
+      min-height: 420px;
+      border: 1px solid var(--line);
+      background: var(--blush-soft);
+    }
+    .contact-map iframe {
+      width: 100%; height: 100%; min-height: 420px; border: 0;
+      filter: grayscale(0.25) contrast(1.02);
+    }
+    .contact-socials {
+      display: flex; gap: 16px; margin-top: 32px;
+    }
+    .icon-btn {
+      width: 44px; height: 44px;
+      border: 1px solid var(--line-strong);
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      color: var(--espresso);
+      transition: all .3s var(--ease);
+    }
+    .icon-btn:hover {
+      background: var(--espresso);
+      color: var(--cream);
+      transform: translateY(-2px);
+      border-color: var(--espresso);
+    }
+    .icon-btn svg { width: 18px; height: 18px; }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    footer {
+      background: var(--espresso);
+      color: rgba(250,246,241,0.7);
+      padding: 72px var(--gutter) 40px;
+      text-align: center;
+    }
+    .footer-brand {
+      font-family: var(--serif);
+      font-size: 2rem;
+      color: var(--cream);
+      margin-bottom: 8px;
+      letter-spacing: .04em;
+    }
+    .footer-brand span { font-style: italic; font-weight: 500; }
+    .footer-tag {
+      font-size: .72rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: rgba(250,246,241,0.45);
+      margin-bottom: 36px;
+    }
+    .footer-cta {
+      margin-bottom: 48px;
+    }
+    .footer-cta .btn {
+      background: transparent;
+      border: 1px solid rgba(250,246,241,0.35);
+      color: var(--cream);
+    }
+    .footer-cta .btn:hover {
+      background: var(--cream);
+      color: var(--espresso);
+      border-color: var(--cream);
+    }
+    .footer-socials {
+      display: flex; gap: 16px; justify-content: center; margin-bottom: 40px;
+    }
+    .footer-socials .icon-btn {
+      border-color: rgba(250,246,241,0.25);
+      color: var(--cream);
+    }
+    .footer-socials .icon-btn:hover {
+      background: var(--cream);
+      color: var(--espresso);
+      border-color: var(--cream);
+    }
+    .footer-bottom {
+      padding-top: 32px;
+      border-top: 1px solid rgba(250,246,241,0.10);
+      font-size: .78rem;
+      color: rgba(250,246,241,0.45);
+      letter-spacing: .04em;
+    }
+
+    /* ============================================================
+       MOBILE STICKY CTA
+       ============================================================ */
+    .mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 16px; left: 16px; right: 16px;
+      z-index: 90;
+      padding: 18px 24px;
+      background: var(--espresso);
+      color: var(--cream);
+      text-align: center;
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      box-shadow: 0 12px 36px -8px rgba(42,31,26,0.45);
+      transform: translateY(120%);
+      transition: transform .5s var(--ease);
+    }
+    .mobile-cta.visible { transform: translateY(0); }
+
+    /* ============================================================
+       SCROLL ANIMATIONS
+       ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .9s var(--ease-out), transform .9s var(--ease-out);
+    }
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal.delay-1 { transition-delay: .1s; }
+    .reveal.delay-2 { transition-delay: .2s; }
+    .reveal.delay-3 { transition-delay: .3s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 960px) {
+      .about-grid { grid-template-columns: 1fr; gap: 56px; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 720px) {
+      :root { --section-y: 80px; }
+      .nav { padding: 18px var(--gutter); }
+      .nav.scrolled { padding: 12px var(--gutter); }
+      .nav-links, .nav-cta { display: none; }
+      .nav-toggle { display: inline-flex; }
+
+      .nav.open .nav-links {
+        display: flex;
+        position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+        background: var(--cream);
+        flex-direction: column;
+        align-items: center; justify-content: center;
+        gap: 32px;
+        z-index: -1;
+      }
+      .nav.open .nav-links a {
+        font-family: var(--serif);
+        font-size: 1.6rem;
+        letter-spacing: .04em;
+        text-transform: none;
+        color: var(--espresso);
+      }
+
+      .mobile-cta { display: block; }
+      footer { padding-bottom: 100px; }
+
+      .service { grid-template-columns: 1fr; gap: 12px; }
+      .service-price { justify-self: start; font-size: 1.6rem; }
+
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .testimonial { padding: 36px 24px; }
+      .testimonial-quote { font-size: 1.05rem; }
+
+      .about-credentials { gap: 32px; }
+      .credential strong { font-size: 1.6rem; }
+
+      .hero { padding-top: 120px; }
+      .hero-scroll { display: none; }
+
+      .contact-map, .contact-map iframe { min-height: 320px; }
+    }
+
+    @media (max-width: 420px) {
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .btn { padding: 16px 28px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================ -->
+  <!-- NAV                                                          -->
+  <!-- ============================================================ -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav-brand">Amara <span>Lash</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <!-- Booking link wired by JS — see BOOKING_URL constant below -->
+      <a href="#" data-book class="btn btn-primary" target="_blank" rel="noopener">Book Appointment</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- ============================================================ -->
+    <!-- HERO                                                         -->
+    <!-- ============================================================ -->
+    <section class="hero" id="hero">
+      <!-- TODO: REPLACE hero background — set background-image on .hero-bg in CSS above
+           with a full-bleed close-up lash photo (~2400x1600, soft natural light). -->
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container">
+        <span class="hero-eyebrow reveal">Brooklyn · Est. 2020</span>
+        <h1 class="reveal delay-1">Lashes designed <em>just for you.</em></h1>
+        <p class="hero-tagline reveal delay-2">
+          Bespoke eyelash extensions in a quiet, light-filled studio on Kings Highway.
+        </p>
+        <a href="#" data-book target="_blank" rel="noopener" class="btn btn-primary reveal delay-3">
+          Book Appointment
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">Scroll</div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- ABOUT                                                        -->
+    <!-- ============================================================ -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-wrap reveal">
+            <div class="about-image" role="img" aria-label="Amara Lash studio interior">
+              <!-- TODO: REPLACE — add an <img> here of the founder or studio interior.
+                   <img src="/images/founder.jpg" alt="Founder of Amara Lash, certified master lash artist" /> -->
+            </div>
+            <div class="about-image-frame" aria-hidden="true"></div>
+          </div>
+
+          <div class="about-text reveal delay-1">
+            <span class="eyebrow">The Studio</span>
+            <h2>Quietly precise. <em>Unmistakably yours.</em></h2>
+            <p>
+              Amara Lash is a private, appointment-only studio in Brooklyn dedicated to the craft
+              of custom eyelash extensions. Every set is designed in collaboration with you — your
+              eye shape, your lifestyle, the look you want to live in.
+            </p>
+            <p>
+              With over five years of specialized training and certification in classic, hybrid,
+              volume, and mega volume techniques, we work lash-by-lash with premium-grade materials
+              that protect the integrity of your natural lashes.
+            </p>
+            <p>
+              Step inside and exhale. The studio is intentionally calm, low-light, and unhurried —
+              an hour or two that belongs entirely to you.
+            </p>
+
+            <div class="about-credentials">
+              <div class="credential"><strong>5+</strong>Years experience</div>
+              <div class="credential"><strong>1,200+</strong>Sets completed</div>
+              <div class="credential"><strong>100%</strong>Custom-mapped</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SERVICES                                                     -->
+    <!-- ============================================================ -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Services & Pricing</span>
+          <h2>Crafted, never rushed.</h2>
+          <p>Each appointment includes a brief consultation to map your set. All services use premium synthetic mink lashes and medical-grade adhesive.</p>
+        </div>
+
+        <div class="services-list">
+          <div class="service reveal">
+            <div>
+              <h3 class="service-name">Classic</h3>
+              <div class="service-meta"><span>90–120 min</span><span>Natural finish</span></div>
+              <p class="service-desc">One extension per natural lash for refined, polished definition. The everyday-wear set.</p>
+            </div>
+            <div class="service-price">$100</div>
+          </div>
+
+          <div class="service reveal">
+            <div>
+              <h3 class="service-name">Hybrid</h3>
+              <div class="service-meta"><span>120 min</span><span>Soft texture</span></div>
+              <p class="service-desc">A 70/30 blend of classic and volume — soft, slightly textured fullness without weight.</p>
+            </div>
+            <div class="service-price">$120</div>
+          </div>
+
+          <div class="service reveal">
+            <div>
+              <h3 class="service-name">Volume</h3>
+              <div class="service-meta"><span>120–150 min</span><span>Multidimensional</span></div>
+              <p class="service-desc">Hand-crafted fans (2D–6D) for lush, full density that still feels weightless.</p>
+            </div>
+            <div class="service-price">$120</div>
+          </div>
+
+          <div class="service reveal">
+            <div>
+              <h3 class="service-name">Mega Volume</h3>
+              <div class="service-meta"><span>150–180 min</span><span>Statement</span></div>
+              <p class="service-desc">Our most dramatic look — dense, ultra-fine fans built for full impact.</p>
+            </div>
+            <div class="service-price">$220</div>
+          </div>
+
+          <div class="service reveal">
+            <div>
+              <h3 class="service-name">Wispy</h3>
+              <div class="service-meta"><span>120 min</span><span>Spiked, fluttery</span></div>
+              <p class="service-desc">Strategic length variation for a fluttery, lived-in finish — equal parts soft and striking.</p>
+            </div>
+            <div class="service-price">$120</div>
+          </div>
+        </div>
+
+        <p class="services-note">Fills available — pricing varies by retention. Please book your refill within three weeks.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- GALLERY                                                      -->
+    <!-- ============================================================ -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Gallery</span>
+          <h2>Recent <em>work.</em></h2>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- TODO: REPLACE the 9 placeholders below with real <img src="..." alt="..."> elements
+               (square 1:1 crops, ~1200x1200, descriptive alt text for each set). -->
+          <div class="gallery-item reveal" role="img" aria-label="Classic lash set, natural look"></div>
+          <div class="gallery-item reveal delay-1" role="img" aria-label="Hybrid lash set, soft texture"></div>
+          <div class="gallery-item reveal delay-2" role="img" aria-label="Volume lash set, multidimensional"></div>
+          <div class="gallery-item reveal" role="img" aria-label="Wispy lash set, spiked finish"></div>
+          <div class="gallery-item reveal delay-1" role="img" aria-label="Mega volume lash set, dramatic"></div>
+          <div class="gallery-item reveal delay-2" role="img" aria-label="Classic lash set on almond eye shape"></div>
+          <div class="gallery-item reveal" role="img" aria-label="Volume lash set, doll-eye styling"></div>
+          <div class="gallery-item reveal delay-1" role="img" aria-label="Hybrid lash set, cat-eye styling"></div>
+          <div class="gallery-item reveal delay-2" role="img" aria-label="Wispy mega volume hybrid set"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- TESTIMONIALS                                                 -->
+    <!-- ============================================================ -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Kind Words</span>
+          <h2>From our clients.</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <figure class="testimonial reveal">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="testimonial-quote">
+              “Truly the most thoughtful lash work I’ve ever had. The space feels like a quiet ritual, and I leave looking like myself — only better.”
+            </blockquote>
+            <figcaption class="testimonial-name">Maya R.</figcaption>
+          </figure>
+
+          <figure class="testimonial reveal delay-1">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="testimonial-quote">
+              “Six months in and I won’t go anywhere else. Every set is perfectly tailored to my eye shape — and the retention is unmatched.”
+            </blockquote>
+            <figcaption class="testimonial-name">Sarah K.</figcaption>
+          </figure>
+
+          <figure class="testimonial reveal delay-2">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="testimonial-quote">
+              “I’ve finally found someone who understands a soft, natural look. The studio is gorgeous and the work is impeccable.”
+            </blockquote>
+            <figcaption class="testimonial-name">Jenna P.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- FAQ                                                          -->
+    <!-- ============================================================ -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Frequently Asked</span>
+          <h2>Good to know.</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>How do I prepare for my first appointment?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner">
+              Arrive with clean, makeup-free eyes — no mascara, eyeliner, or heavy moisturizer.
+              Skip caffeine if you tend to flutter, and please remove contact lenses before your
+              appointment. Plan for up to 2.5 hours so we’re never rushed.
+            </div></div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>How long do extensions last? When should I book my fill?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner">
+              Lash extensions follow your natural growth cycle and typically last 3–4 weeks.
+              For best retention and a seamless look, we recommend booking a fill every 2–3 weeks.
+              After three weeks, a full set is usually needed.
+            </div></div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>What does aftercare look like?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner">
+              Avoid water, steam, and oils for the first 24 hours. After that, cleanse daily with a
+              lash-safe foam, brush gently every morning with a clean spoolie, and skip oil-based
+              makeup removers. Sleep on your back or side when possible — never face down.
+            </div></div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>I have sensitive eyes or allergies. What should I know?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner">
+              We carry sensitive-skin adhesives and offer patch testing 48 hours in advance for
+              first-time clients with a history of allergies. Please share any sensitivities or
+              recent eye procedures when you book so we can plan accordingly.
+            </div></div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-q" aria-expanded="false">
+              <span>What is your cancellation policy?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a"><div class="faq-a-inner">
+              Out of respect for the studio and other clients, we ask for at least 24 hours’ notice
+              to cancel or reschedule. Same-day cancellations and no-shows are charged 50% of the
+              service. We deeply appreciate your understanding.
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CONTACT                                                      -->
+    <!-- ============================================================ -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Visit</span>
+          <h2>Come say hello.</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <a href="tel:+19297136953" class="contact-detail">
+              <span class="contact-label">Phone</span>
+              <span class="contact-value">(929) 713-6953</span>
+            </a>
+
+            <a href="mailto:jasminakhi17@gmail.com" class="contact-detail">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">jasminakhi17@gmail.com</span>
+            </a>
+
+            <a href="https://www.google.com/maps/dir/?api=1&destination=816+Kings+Hwy+Brooklyn+NY+11223" target="_blank" rel="noopener" class="contact-detail">
+              <span class="contact-label">Studio</span>
+              <span class="contact-value">816 Kings Hwy, Brooklyn, NY 11223</span>
+            </a>
+
+            <div class="contact-detail">
+              <span class="contact-label">Hours</span>
+              <div class="contact-hours">
+                <div>Monday – Saturday · 10am – 8pm</div>
+                <div>Sunday · Closed</div>
+              </div>
+            </div>
+
+            <div class="contact-socials">
+              <a href="https://instagram.com/amara_lashess" target="_blank" rel="noopener" class="icon-btn" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+              </a>
+              <a href="tel:+19297136953" class="icon-btn" aria-label="Call us">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </a>
+              <a href="mailto:jasminakhi17@gmail.com" class="icon-btn" aria-label="Email us">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-map reveal delay-1">
+            <iframe
+              title="Amara Lash on the map"
+              src="https://maps.google.com/maps?q=816+Kings+Hwy,+Brooklyn,+NY+11223&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER                                                       -->
+  <!-- ============================================================ -->
+  <footer>
+    <div class="footer-brand">Amara <span>Lash</span></div>
+    <div class="footer-tag">Brooklyn · By appointment</div>
+
+    <div class="footer-cta">
+      <a href="#" data-book target="_blank" rel="noopener" class="btn">Book Appointment <span class="arrow">→</span></a>
+    </div>
+
+    <div class="footer-socials">
+      <a href="https://instagram.com/amara_lashess" target="_blank" rel="noopener" class="icon-btn" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+      </a>
+      <a href="tel:+19297136953" class="icon-btn" aria-label="Call us">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+      <a href="mailto:jasminakhi17@gmail.com" class="icon-btn" aria-label="Email us">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+      </a>
+    </div>
+
+    <div class="footer-bottom">
+      © <span id="year"></span> Amara Lash · 816 Kings Hwy, Brooklyn, NY 11223
+    </div>
+  </footer>
+
+  <!-- Mobile sticky CTA -->
+  <a href="#" data-book target="_blank" rel="noopener" class="mobile-cta" id="mobileCta">Book Appointment</a>
+
+  <script>
+    /* ============================================================
+       CONFIG — replace BOOKING_URL with your real booking system link.
+       (e.g. Vagaro, Square Appointments, GlossGenius, Calendly, etc.)
+       ============================================================ */
+    const BOOKING_URL = 'https://YOUR-BOOKING-LINK.com'; // TODO: REPLACE
+
+    document.querySelectorAll('[data-book]').forEach(el => {
+      el.setAttribute('href', BOOKING_URL);
+    });
+
+    /* ---------- Sticky nav background on scroll ---------- */
+    const nav = document.getElementById('nav');
+    const onScroll = () => {
+      if (window.scrollY > 24) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ---------- Mobile menu toggle ---------- */
+    const toggle = document.querySelector('.nav-toggle');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    // Close menu when a nav link is tapped
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+
+    /* ---------- FAQ accordion ---------- */
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const q = item.querySelector('.faq-q');
+      const a = item.querySelector('.faq-a');
+      q.addEventListener('click', () => {
+        const isOpen = item.classList.toggle('open');
+        q.setAttribute('aria-expanded', isOpen);
+        a.style.maxHeight = isOpen ? a.scrollHeight + 'px' : '0';
+      });
+    });
+
+    /* ---------- Scroll reveal animations ---------- */
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    /* ---------- Mobile sticky CTA — show after hero ---------- */
+    const mobileCta = document.getElementById('mobileCta');
+    const heroEnd = document.getElementById('about');
+    if (heroEnd && mobileCta) {
+      const ctaObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) mobileCta.classList.add('visible');
+        });
+      }, { threshold: 0.05 });
+      ctaObserver.observe(heroEnd);
+    }
+
+    /* ---------- Footer year ---------- */
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
