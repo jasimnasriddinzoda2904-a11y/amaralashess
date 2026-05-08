@@ -179,34 +179,6 @@
     .section-head p { color: var(--espresso-soft); margin-top: 1.2rem; font-size: 1.05rem; }
 
     /* ============================================================
-       BUTTONS
-       ============================================================ */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      padding: 18px 36px;
-      font-size: .8rem;
-      font-weight: 500;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      border-radius: 2px;
-      transition: all .35s var(--ease);
-      white-space: nowrap;
-    }
-    .btn-primary {
-      background: var(--espresso);
-      color: var(--cream);
-    }
-    .btn-primary:hover {
-      background: var(--espresso-soft);
-      transform: translateY(-2px);
-      box-shadow: 0 18px 40px -16px rgba(42, 31, 26, 0.45);
-    }
-    .btn .arrow { transition: transform .35s var(--ease); }
-    .btn:hover .arrow { transform: translateX(4px); }
-
-    /* ============================================================
        NAV
        ============================================================ */
     .nav {
@@ -248,10 +220,6 @@
     }
     .nav-links a:hover { color: var(--espresso); }
     .nav-links a:hover::after { width: 100%; }
-    .nav-cta { display: inline-flex; }
-    .nav-cta .btn {
-      padding: 12px 24px; font-size: .7rem;
-    }
 
     .nav-toggle {
       display: none;
@@ -342,14 +310,6 @@
       line-height: 1.7;
       color: rgba(250, 246, 241, 0.85);
       font-weight: 300;
-    }
-    .hero .btn-primary {
-      background: var(--cream);
-      color: var(--espresso);
-    }
-    .hero .btn-primary:hover {
-      background: var(--blush);
-      box-shadow: 0 18px 40px -16px rgba(0, 0, 0, 0.5);
     }
     .hero-scroll {
       position: absolute; left: 50%; bottom: 36px;
@@ -716,19 +676,6 @@
       color: rgba(250,246,241,0.45);
       margin-bottom: 36px;
     }
-    .footer-cta {
-      margin-bottom: 48px;
-    }
-    .footer-cta .btn {
-      background: transparent;
-      border: 1px solid rgba(250,246,241,0.35);
-      color: var(--cream);
-    }
-    .footer-cta .btn:hover {
-      background: var(--cream);
-      color: var(--espresso);
-      border-color: var(--cream);
-    }
     .footer-socials {
       display: flex; gap: 16px; justify-content: center; margin-bottom: 40px;
     }
@@ -748,29 +695,6 @@
       color: rgba(250,246,241,0.45);
       letter-spacing: .04em;
     }
-
-    /* ============================================================
-       MOBILE STICKY CTA
-       ============================================================ */
-    .mobile-cta {
-      display: none;
-      position: fixed;
-      bottom: 16px; left: 16px; right: 16px;
-      z-index: 90;
-      padding: 18px 24px;
-      background: var(--espresso);
-      color: var(--cream);
-      text-align: center;
-      font-size: .78rem;
-      font-weight: 500;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      border-radius: 2px;
-      box-shadow: 0 12px 36px -8px rgba(42,31,26,0.45);
-      transform: translateY(120%);
-      transition: transform .5s var(--ease);
-    }
-    .mobile-cta.visible { transform: translateY(0); }
 
     /* ============================================================
        SCROLL ANIMATIONS
@@ -810,7 +734,7 @@
       :root { --section-y: 80px; }
       .nav { padding: 18px var(--gutter); }
       .nav.scrolled { padding: 12px var(--gutter); }
-      .nav-links, .nav-cta { display: none; }
+      .nav-links { display: none; }
       .nav-toggle { display: inline-flex; }
 
       .nav.open .nav-links {
@@ -829,9 +753,6 @@
         text-transform: none;
         color: var(--espresso);
       }
-
-      .mobile-cta { display: block; }
-      footer { padding-bottom: 100px; }
 
       .service { grid-template-columns: 1fr; gap: 12px; }
       .service-price { justify-self: start; font-size: 1.6rem; }
@@ -852,7 +773,6 @@
 
     @media (max-width: 420px) {
       .gallery-grid { grid-template-columns: 1fr 1fr; }
-      .btn { padding: 16px 28px; }
     }
   </style>
 </head>
@@ -871,10 +791,6 @@
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="nav-cta">
-      <!-- Booking link wired by JS — see BOOKING_URL constant below -->
-      <a href="#" data-book class="btn btn-primary" target="_blank" rel="noopener">Book Appointment</a>
-    </div>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
       <span></span>
     </button>
@@ -897,10 +813,6 @@
         <p class="hero-tagline reveal delay-2">
           Bespoke eyelash extensions in a quiet, light-filled studio on Kings Highway.
         </p>
-        <a href="#" data-book target="_blank" rel="noopener" class="btn btn-primary reveal delay-3">
-          Book Appointment
-          <span class="arrow" aria-hidden="true">→</span>
-        </a>
       </div>
 
       <div class="hero-scroll" aria-hidden="true">Scroll</div>
@@ -1216,10 +1128,6 @@
     <div class="footer-brand">Amara <span>Lash</span></div>
     <div class="footer-tag">Brooklyn · By appointment</div>
 
-    <div class="footer-cta">
-      <a href="#" data-book target="_blank" rel="noopener" class="btn">Book Appointment <span class="arrow">→</span></a>
-    </div>
-
     <div class="footer-socials">
       <a href="https://instagram.com/amara_lashess" target="_blank" rel="noopener" class="icon-btn" aria-label="Instagram">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
@@ -1237,20 +1145,7 @@
     </div>
   </footer>
 
-  <!-- Mobile sticky CTA -->
-  <a href="#" data-book target="_blank" rel="noopener" class="mobile-cta" id="mobileCta">Book Appointment</a>
-
   <script>
-    /* ============================================================
-       CONFIG — replace BOOKING_URL with your real booking system link.
-       (e.g. Vagaro, Square Appointments, GlossGenius, Calendly, etc.)
-       ============================================================ */
-    const BOOKING_URL = 'https://YOUR-BOOKING-LINK.com'; // TODO: REPLACE
-
-    document.querySelectorAll('[data-book]').forEach(el => {
-      el.setAttribute('href', BOOKING_URL);
-    });
-
     /* ---------- Sticky nav background on scroll ---------- */
     const nav = document.getElementById('nav');
     const onScroll = () => {
@@ -1298,18 +1193,6 @@
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-    /* ---------- Mobile sticky CTA — show after hero ---------- */
-    const mobileCta = document.getElementById('mobileCta');
-    const heroEnd = document.getElementById('about');
-    if (heroEnd && mobileCta) {
-      const ctaObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) mobileCta.classList.add('visible');
-        });
-      }, { threshold: 0.05 });
-      ctaObserver.observe(heroEnd);
-    }
 
     /* ---------- Footer year ---------- */
     document.getElementById('year').textContent = new Date().getFullYear();
